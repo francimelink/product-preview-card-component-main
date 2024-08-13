@@ -174,7 +174,7 @@ main {
 
 }
 
-img {
+picture>img {
     max-width: 100%;
     max-height: 15rem;
     border-radius: .625rem .625rem 0 0;
@@ -230,16 +230,15 @@ img {
     text-decoration: line-through;
 }
 
-.product__detailes button>span::before {
-    background-image: url("../images/icon-cart.svg");
-    background-position: center;
-    background-size: cover;
-    content: " ";
-    width: 1rem;
+.product__detailes button>span,
+.product__detailes button>img {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .product__detailes button>span {
     margin-left: 1rem;
+
 }
 
 .product__detailes button {
@@ -254,6 +253,11 @@ img {
     border-radius: .5rem;
 }
 
+.product__detailes button:hover {
+    background-color: hsl(158, 42%, 18%);
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 48rem) {
     main {
         grid-template-columns: 1fr 1fr;
@@ -261,7 +265,7 @@ img {
         max-width: 37.5rem;
     }
 
-    img {
+    picture>img {
         border-radius: .625rem 0 0 .625rem;
         max-height: 100%;
     }
